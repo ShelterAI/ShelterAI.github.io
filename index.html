@@ -46,7 +46,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="http://note.youdao.com/noteshare?id=909b29e58b0f176290ebee9ff49ef21e&amp;sub=FB9F98900DF14DFAB5A63E79B726FB58" class="js-avatar">
+			<img src="https://note.youdao.com/yws/public/resource/909b29e58b0f176290ebee9ff49ef21e/xmlnote/BAE226CDC7594C81AE5A0C7FDA4B9638/14798" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">ShelterAI</a></h1>
@@ -104,7 +104,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="http://note.youdao.com/noteshare?id=909b29e58b0f176290ebee9ff49ef21e&amp;sub=FB9F98900DF14DFAB5A63E79B726FB58" class="js-avatar">
+				<img src="https://note.youdao.com/yws/public/resource/909b29e58b0f176290ebee9ff49ef21e/xmlnote/BAE226CDC7594C81AE5A0C7FDA4B9638/14798" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">ShelterAI</h1>
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="用Hexo搭建个人博客"><a href="#用Hexo搭建个人博客" class="headerlink" title="用Hexo搭建个人博客"></a>用Hexo搭建个人博客</h1><p><strong>这既是一篇总结，同时也算是自己立的一个flag。一直以来都没有写博客来记录学习笔记和方式的习惯，学过的东西总是容易遗忘。所以建立这个博客，希望自己能够坚持更新，不断提升。</strong></p>
+        <p><strong>这既是一篇总结，同时也算是自己立的一个flag。一直以来都没有写博客来记录学习笔记和方式的习惯，学过的东西总是容易遗忘。所以建立这个博客，希望自己能够坚持更新，不断提升。</strong></p>
 <h2 id="1、环境准备"><a href="#1、环境准备" class="headerlink" title="1、环境准备"></a>1、环境准备</h2><p>Hexo的安装和部署需要nodejs和git</p>
 <blockquote>
 <p>nodejs：官网下载<a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a><br>git: Mac，Linux可以直接安装（Centos用yum，Ubuntu用apt）；Windows需要下载安装，<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网</a></p>
@@ -195,11 +195,13 @@
 <h2 id="3、编写博客"><a href="#3、编写博客" class="headerlink" title="3、编写博客"></a>3、编写博客</h2><h3 id="3-1-创建博客"><a href="#3-1-创建博客" class="headerlink" title="3.1 创建博客"></a>3.1 创建博客</h3><p><code>hexo n &quot;文章名&quot;</code>   新添一篇名为“文章名”的博客，会在<em>./blog/source/_posts</em>文件夹下创建一个同名的.md文件   </p>
 <h3 id="3-2-编辑博客"><a href="#3-2-编辑博客" class="headerlink" title="3.2 编辑博客"></a>3.2 编辑博客</h3><p>切换到博客所在目录进行编辑<br><code>cd blog/sorce/_posts</code><br><code>vim 文件名.md</code><br>博客编辑是基于markdown</p>
 <h3 id="3-3-markdown基础"><a href="#3-3-markdown基础" class="headerlink" title="3.3 markdown基础"></a>3.3 markdown基础</h3><p>可以通过“<a href="https://www.mdeditor.com/" target="_blank" rel="noopener">Markdown在线编辑器</a>”进行学习，很容易上手。</p>
-<h3 id="3-4-生成博客"><a href="#3-4-生成博客" class="headerlink" title="3.4 生成博客"></a>3.4 生成博客</h3><p><code>hexo clean</code>生成之前需要先清理一下缓存文件<br><code>hexo g</code>输入命令就会生成博客了，剩下的就只要将它部署/更新到github上</p>
+<h3 id="3-4-生成博客"><a href="#3-4-生成博客" class="headerlink" title="3.4 生成博客"></a>3.4 生成博客</h3><p><code>hexo clean</code>生成之前需要先清理一下缓存文件<br><code>hexo g</code>输入命令就会生成博客了，剩下的就只要将它部署/更新到github上 </p>
+<p><em>注：hexo的命令是在blog文件夹下执行才有用</em></p>
 <h2 id="4、部署到GitHub"><a href="#4、部署到GitHub" class="headerlink" title="4、部署到GitHub"></a>4、部署到GitHub</h2><h3 id="4-1-GitHub仓库准备"><a href="#4-1-GitHub仓库准备" class="headerlink" title="4.1 GitHub仓库准备"></a>4.1 GitHub仓库准备</h3><p>在github上注册一个账号，然后创建一个新的仓库，注意仓库名字一定要是“<em>用户名.github.io</em>”。<br>同时在本地命令行输入<code>cnpm install --save hexo-deployer-git</code>安装部署工具</p>
 <h3 id="4-2-修改博客配置文件-config-yml"><a href="#4-2-修改博客配置文件-config-yml" class="headerlink" title="4.2 修改博客配置文件_config.yml"></a>4.2 修改博客配置文件_config.yml</h3><p>进入blog文件夹，打开_config.yml<br><code>vim _config.yml</code><br>修改文件中deploy下的type，并添加repo写上github仓库地址，以及branch。下面以我的博客举例：<br><code>deploy:</code><br>&emsp;<code>type: git</code><br>&emsp;<code>repo: https://github.com/ShelterAI/ShelterAI.github.io.git</code><br>&emsp;<code>branch: master</code></p>
 <p><em>注意：type、repo、branch的冒号后面一定要加一个空格，否则会出错。</em>  </p>
-<h3 id="4-3-部署到远端"><a href="#4-3-部署到远端" class="headerlink" title="4.3 部署到远端"></a>4.3 部署到远端</h3><p><code>hexo d</code>运行后会提示输入github的账号和密码</p>
+<h3 id="4-3-部署到远端"><a href="#4-3-部署到远端" class="headerlink" title="4.3 部署到远端"></a>4.3 部署到远端</h3><p><code>hexo d</code>运行后会提示输入github的账号和密码。    </p>
+<p>部署好之后，打开“用户名.github.io”就可以访问你的博客啦！</p>
 <h2 id="5、修改博客主题"><a href="#5、修改博客主题" class="headerlink" title="5、修改博客主题"></a>5、修改博客主题</h2><p>Hexo的默认主题不好看，但别担心，有很多主题可以更换。<br>这里给一个链接：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题</a>这上面有很多，而且有安装向导。<br>一般就是把主题下载下来，放到blog文件夹下的themes文件夹下，然后修改_config.yml文件的theme字段，将其改成你想要的主题名即可。<br>下面举例：<br>替换一个名为yilia的主题<br><code>git clone https://github.com/litten/hexo-theme-yilia blog/themes</code><br><code>vim _config.yml</code> 修改theme字段为<code>theme:yilia</code></p>
 
       
